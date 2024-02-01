@@ -7,6 +7,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actions.Scroll;
@@ -20,6 +21,7 @@ import static com.advantageonlineshop.advantagedemosuite.userinterfaces.Advantag
 import static com.advantageonlineshop.advantagedemosuite.userinterfaces.InicioPageObjects.INICIO_BUTTON;
 import static com.advantageonlineshop.advantagedemosuite.userinterfaces.RegisterPageObjects.*;
 import static com.advantageonlineshop.advantagedemosuite.userinterfaces.StartsharpHomePage.startsharpHomePage;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
@@ -30,9 +32,10 @@ public class Pedido {
     @Before
     public void set_the_stage() {
         OnStage.setTheStage(new OnlineCast());
+        OnStage.theActorCalled("admin");
     }
 
-    @Given("^como (.*) ingreso a la pagina$")
+    @Given("^como admin ingreso a la pagina$")
     public void ingresoALaPagina() throws Exception {
         theActorInTheSpotlight().attemptsTo(Open.browserOn(startsharpHomePage()));
         theActorInTheSpotlight().attemptsTo(Click.on(INICIO_BUTTON));

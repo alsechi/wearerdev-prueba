@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="hacer pedido" skipped="0" tests="1" time="29.85" timestamp="2024-02-01 01:26:08"><testcase name="Hacer un pedido con los usuarios y productos regitrados"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+com.advantageonlineshop.advantagedemosuite.tasks.pedido.NuevoPedido.performAs(NuevoPedido.java:41)&#13;
+com.advantageonlineshop.advantagedemosuite.stepdefinitions.Pedido.creoNuevoPedido(Pedido.java:52)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>
